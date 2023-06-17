@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.bosh_menu{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #536DFD ;
+    overflow: hidden;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+.dumaloq{
+    position: absolute;
+    top: -11vw;
+    right: -14vw;
+    width:50vw;
+    height: 50vw;
+    min-height: 300px;
+    min-width: 300px;
+    background: #FFD401;
+    border-radius: 50%;
+
+}
+.header_text{
+    width: 43%;
+    min-width: 300px;
+}
+.header_text h2{
+    font-size: 3vw;
+    /* line-height: 60px; */
+    color: #FFFFFF;
+    text-align: left;
+    margin-left: 10%;
+    position: relative;
+    z-index: 12;
+}
+.header_text span{
+    color: #FFD401;
+}
+.header_text p{
+    font-size:1.3vw ;
+    color: #FFFFFF;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.header_text .header_input{
+    width:80%;
+    /* height: 40px; */
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    background-color: white;
+    border-radius: 4px;
+}
+.header_text .header_input input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    margin-right: 20px;
+    padding-left: 15px;
+    border-radius: 8px;
+    outline: none;
+}
+.header_card{
+    position: relative;
+    z-index: 212;
+    gap: 10px;
+}
+
+.header_card{
+    width: 40%;
+    min-width: 300px;
+    position: relative;
+    z-index: 122;
+    display: grid;
+    grid-template-columns:auto auto ;
+    /* display: flex; */
+    align-items: center;
+    margin-left: 10%;
+}
+.card1{
+    width: 400px;
+    min-width: 250px;
+    height: 180px;
+    background-color: white;
+    position: relative;
+    border-radius: 4px;
+}
+.as{
+    padding-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.card1 h1{
+    font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+padding: 3px 5px 3px 5px;
+background-color: #FFB800;
+border-radius: 2px;
+}
+.as h2{
+font-size: 20px;
+line-height: 24px;
+color: #2E2E2E;
+font-size: 16px;
+}
+.as span{
+    font-size: 12px;
+    font-weight: 400;
+}
+.card1 h3{
+    font-size: 20px;
+    line-height: 24px;
+    color: #2E2E2E;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.card1 span{
+    font-size: 14px;
+    line-height: 17px;
+    color: #9DA7BB;
+}
+#card1{
+    margin-left: 10%;
+}
+.yulduzcha{
+color: #FFD401;
+margin-bottom: 12px;
+}
+.yulduz1{
+    margin-bottom: 12px;
+    margin-right: 7px;
+    color: grey;
+}
+.yulduz{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.onga{
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: #536DFD;
+    background-color: white;
+    border: 1px solid #9DA7BB;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+@media (max-width:600px){
+    .header_text h2{
+        font-size: 23px;
+
+    }
+    .header_text p{
+        font-size: 15px;
+    }
+}
+@media (max-width:500px){
+    .dumaloq{
+        display: none;
+    }
+}
