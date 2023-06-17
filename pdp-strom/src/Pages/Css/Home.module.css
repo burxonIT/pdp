@@ -160,7 +160,7 @@ margin-bottom: 12px;
     border: 1px solid #9DA7BB;
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    /* right: 20px; */
 }
 @media (max-width:600px){
     .header_text h2{
