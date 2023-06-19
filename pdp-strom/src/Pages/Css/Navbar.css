@@ -1,0 +1,133 @@
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin:  auto;
+    background-color: #fff;
+}
+.BOR{
+
+    background-color: #fff;
+}
+.logo_page{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.select{
+    width: 160px;
+    text-align: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 5px;
+    color: #536DFD;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 3px gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cars{
+    border:1px solid #9DA7BB;
+    width: 150px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 4px;
+    color: #536DFD;
+}
+.bat_page{
+    width: 40%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+#cars1{
+    border:1px solid #9DA7BB;
+    /* width: 150px; */
+    padding: 3px 10px 3px 10px;
+    border-radius: 4px;
+    color: #9DA7BB;
+}
+.select1{
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #536DFD;
+    box-shadow: 1px 1px 3px gray;
+}
+.bat_page button{
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background: #536DFD;
+    height: 40px;
+   
+    color: #fff;
+}
+
+@media (max-width:1216px) {
+    #cars{
+        margin-left: 50%;
+    }
+}
+@media (max-width:836px) {
+ #cars1{
+    margin-left: -40%;
+ }
+  .bat_page button{
+    margin-left: 40%;
+  }
+ 
+}
+@media (max-width:688px) {
+    .navbar{
+        width: 50%;
+        height: auto;
+    }
+   .logo_page{
+    flex-direction: column;
+    
+   }
+   #cars{
+    margin-top: 30% !important;
+    margin: 10px auto;
+
+   }
+   #cars1{
+    margin: 30px auto;
+    width: 150px;
+   }
+
+   .bat_page{
+    flex-direction: column-reverse;
+   }
+   .bat_page button{
+    margin: 10px auto;
+   }
+   .logo_page img{
+    margin-top: -10%;
+   }
+   .navbar{
+    width: 90%;
+   }
+}
+@media (max-width:422px) {
+    .bat_page button{
+        width: 70%;
+        margin-top: 10%;
+    }
+    #cars1{
+        width: 60%;
+    }
+    #cars{
+        width: 90%;
+        font-size: 15px;
+    }
+}
+@media (max-width:1210px) {
+    .navbar{
+        width: 80%;
+    }
+}
