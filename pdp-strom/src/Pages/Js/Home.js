@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, lazy } from 'react'
 import Navbar from './NavbarMe'
 import Footer from './FooterMe'
 import s from  '../Css/Home.module.css'
@@ -25,6 +25,10 @@ import img17 from '../img/Rectangle 11.7.png'
 import img18 from '../img/Rectangle 11.9.png'
 import img19 from '../img/Rectangle 11.11.png'
 import img20 from '../img/Ellipse.png'
+import pinterest from '../img/Group 23.png'
+import adidas from '../img/download.png'
+import lya from '../img/download 5.png'
+import sur from '../img/download 3.png'
 export default class Home extends Component {
   render() {
     return (
@@ -346,21 +350,35 @@ export default class Home extends Component {
             <div className={s.divbig5}>
                 <h1>Biz haqimizda boshqalar fikri</h1>
   <div class={s.swipers}>
-    <div class={s.slide}>
+    {/* <div class={s.slide}>
         <img src={img20} alt="" />
         <h2>Ted Howard</h2>
         <span>Senior Designer</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
-        </div>
+        </div> */}
     {/* <div class={s.slide}>Slide 2</div>
     <div class={s.slide}>Slide 3</div> */}
-  </div>
-</div>
+            </div>
+            </div>
+            <div className={s.divbig6}>
+                <h1>Bizning hamkorlar</h1>
+                <div className={s.divbigimg}>
+                <div className={s.divimg}>
+                    <a href=""><img src={pinterest} alt="" /></a>
+                </div>
+                <div className={s.divimg}>
+                  <a href="">  <img src={adidas} alt="" /></a>
+                </div>
+                <div className={s.divimg}>
+                    <a href=""><img src={lya} alt="" /></a>
+                  
+                </div>
+                <div className={s.divimg}>
+                   <a href=""> <img src={sur} alt="" /></a>
+                </div>
+                </div>
+            </div>
         
-
-
-           
-
         <Footer/>
       </div>
     )
