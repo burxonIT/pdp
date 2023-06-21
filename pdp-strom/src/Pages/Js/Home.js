@@ -18,7 +18,13 @@ import img10 from '../img/Vector (18).png'
 import img11 from '../img/Vector (19).png'
 import img12 from '../img/Vector (20).png'
 import img13 from '../img/Vector (21).png'
-
+import img14 from '../img/Rectangle 11.1.png'
+import img15 from '../img/Rectangle 11.3.png'
+import img16 from '../img/Rectangle 11.5.png'
+import img17 from '../img/Rectangle 11.7.png'
+import img18 from '../img/Rectangle 11.9.png'
+import img19 from '../img/Rectangle 11.11.png'
+import img20 from '../img/Ellipse.png'
 export default class Home extends Component {
   render() {
     return (
@@ -194,6 +200,7 @@ export default class Home extends Component {
                     <img src={img9} alt="" />
                     <h2>Buxgalteriya</h2>
                 </div>
+                </div>
                 <div className={s.divcards2}>
                 <div className={s.carddiv}>
                     <img src={img10} alt="" />
@@ -212,10 +219,144 @@ export default class Home extends Component {
                     <h2>Salomatlik</h2>
                 </div>
                 </div>
+                <div className={s.divcards3}>
+                    <h3>Dasturlash</h3>
+                    <h3>Dizayn</h3>
+                    <h3>Marketing</h3>
+                    <h3>Biznes</h3>
+                    <h3>Salomatlik</h3>
+                    <h3>Menejment</h3>
+                    <h3>Buxgalteriya</h3>
+                    <h3>Tarmoq</h3>
+                </div>
+            </div>
+            <div className={s.divbig3}>
+            <div className={s.card11}>
+                <img src={img14} alt="" />
+                <div className={s.mm1}>
+                        <h2>Dasturlash</h2>
+                        </div>
+                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <div className={s.yulduz}>
+                        <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
+                        </div>
+                        <div className={s.pdiv1}>
+                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        </div>
+                        <div className={s.h1div}>
+                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                        </div>
+                        <button className={s.onga1}><AiOutlineArrowRight/></button>
+                    
+            </div>
+            <div className={s.card11}>
+                <img src={img15} alt="" />
+                <div className={s.mm1}>
+                        <h2>Dasturlash</h2>
+                        </div>
+                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <div className={s.yulduz}>
+                        <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
+                        </div>
+                        <div className={s.pdiv1}>
+                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        </div>
+                        <div className={s.h1div}>
+                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                        </div>
+                        <button className={s.onga1}><AiOutlineArrowRight/></button>
+                    
+            </div>
+            <div className={s.card11}>
+                <img src={img16} alt="" />
+                <div className={s.mm1}>
+                        <h2>Dasturlash</h2>
+                        </div>
+                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <div className={s.yulduz}>
+                        <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
+                        </div>
+                        <div className={s.pdiv1}>
+                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        </div>
+                        <div className={s.h1div}>
+                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                        </div>
+                        <button className={s.onga1}><AiOutlineArrowRight/></button>
+                    
+            </div>
+            <div className={s.card11}>
+                <img src={img17} alt="" />
+                <div className={s.mm1}>
+                        <h2>Dasturlash</h2>
+                        </div>
+                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <div className={s.yulduz}>
+                        <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
+                        </div>
+                        <div className={s.pdiv1}>
+                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        </div>
+                        <div className={s.h1div}>
+                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                        </div>
+                        <button className={s.onga1}><AiOutlineArrowRight/></button>
+                    
+            </div>
+            <div className={s.card11}>
+                <img src={img18} alt="" />
+                <div className={s.mm1}>
+                        <h2>Dasturlash</h2>
+                        </div>
+                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <div className={s.yulduz}>
+                        <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
+                        </div>
+                        <div className={s.pdiv1}>
+                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        </div>
+                        <div className={s.h1div}>
+                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                        </div>
+                        <button className={s.onga1}><AiOutlineArrowRight/></button>
+                    
+            </div>
+            <div className={s.card11}>
+                <img src={img19} alt="" />
+                <div className={s.mm1}>
+                        <h2>Dasturlash</h2>
+                        </div>
+                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <div className={s.yulduz}>
+                        <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
+                        </div>
+                        <div className={s.pdiv1}>
+                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        </div>
+                        <div className={s.h1div}>
+                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                        </div>
+                        <button className={s.onga1}><AiOutlineArrowRight/></button>
+                    
             </div>
             </div>
-
-
+            <div className={s.divbig4}>
+                <h1>“O’z qalbing va ichki sezgingga ergashishuchun <br />  yetarlicha jur’atli bo’l. Zotan shu ikki tuyg’u <br /> sening aslida kim bo’lishni xoxlashingni aniq biladi.”</h1>
+            </div>
+            <div className={s.divbig5}>
+                <h1>Biz haqimizda boshqalar fikri</h1>
+  <div class={s.swipers}>
+    <div class={s.slide}>
+        <img src={img20} alt="" />
+        <h2>Ted Howard</h2>
+        <span>Senior Designer</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
+        </div>
+    {/* <div class={s.slide}>Slide 2</div>
+    <div class={s.slide}>Slide 3</div> */}
+  </div>
+</div>
+        
 
 
            
