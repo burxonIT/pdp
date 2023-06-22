@@ -332,7 +332,7 @@ export default class Home extends Component {
             <div className={s.card11}>
                 <img src={img19} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>Dasturlash </h2>
                         </div>
                 <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
                 <div className={s.yulduz}>

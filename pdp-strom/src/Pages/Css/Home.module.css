@@ -790,13 +790,18 @@ margin-top: 20px;
     .slide{
         width: 100%;
     }
-}@media(max-width:750px){
-    
 }
+/* @media(max-width:750px){
+    
+} */
 @media(max-width:726px){
     .slide p{
         font-size:15px;
     }
+    .divbig5 h1{
+        padding-top: 0px;
+    }
+}
      
 @media(max-width:588px){
     .slide p{
@@ -806,7 +811,7 @@ margin-top: 20px;
     }
     .slide img{
         position: absolute;
-        left: 30%;
+        left: 33%;
         
     }
 }
@@ -842,12 +847,6 @@ margin-top: 20px;
    padding-bottom: 50px;
 }
 @media(max-width: 735px) {
-    /* .divbigimg {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        overflow-x: scroll;
-    } */
     .divbigimg img{
        width: 70%;
     }
