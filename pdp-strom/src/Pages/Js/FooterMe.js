@@ -50,6 +50,11 @@ export default class Footerme extends Component {
       <img src={insta} alt="" />
       <img src={youtube}  alt="" />
       </div>
+      <div className={s.tegi}>
+        <p>© 2019 storm.uz</p><span>|</span>
+        <p>Personal Development Process LLC</p><span>|</span>
+        <p>Foydalanish shartlari</p>
+      </div>
       </footer>
 
       </div>

@@ -29,6 +29,10 @@ import pinterest from '../img/Group 23.png'
 import adidas from '../img/download.png'
 import lya from '../img/download 5.png'
 import sur from '../img/download 3.png'
+import { Swiper, SwiperSlide } from "swiper/react";
+  import "swiper/css";
+  import "swiper/css/navigation";
+import { Navigation } from "swiper";
 export default class Home extends Component {
   render() {
     return (
@@ -349,16 +353,30 @@ export default class Home extends Component {
             </div>
             <div className={s.divbig5}>
                 <h1>Biz haqimizda boshqalar fikri</h1>
-  <div class={s.swipers}>
-    {/* <div class={s.slide}>
+            <div className={s.divswiper}>
+            <Swiper navigation={true} modules={[Navigation]} className={s.mySwiper}>
+        <SwiperSlide>  <div class={s.slide}>
         <img src={img20} alt="" />
         <h2>Ted Howard</h2>
         <span>Senior Designer</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
-        </div> */}
-    {/* <div class={s.slide}>Slide 2</div>
-    <div class={s.slide}>Slide 3</div> */}
+        </div> </SwiperSlide>
+        <SwiperSlide>  <div class={s.slide}>
+        <img src={img20} alt="" />
+        <h2>Ted Howard</h2>
+        <span>Senior Designer</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
+        </div> </SwiperSlide>
+        <SwiperSlide>  <div class={s.slide}>
+        <img src={img20} alt="" />
+        <h2>Ted Howard</h2>
+        <span>Senior Designer</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
+        </div> </SwiperSlide>
+ 
+      </Swiper>
             </div>
+        
             </div>
             <div className={s.divbig6}>
                 <h1>Bizning hamkorlar</h1>
