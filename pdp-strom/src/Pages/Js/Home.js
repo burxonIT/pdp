@@ -34,16 +34,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
   import "swiper/css/navigation";
 import { Navigation } from "swiper";
 export default class Home extends Component {
+    state={
+        t:localStorage.getItem("lang")?localStorage.getItem("lang"):"ru"
+    }
   render() {
     return (
       <div>
         <Navbar/>
-            <header className={s.bosh_menu}>
+       
+            <header classNa me={s.bosh_menu}>
                 <div className={s.dumaloq}>
                 </div>
                 <div className={s.header_text}>
                 <h2>Biz sizga <span> Dasturlava </span>| <br /> boshqa kurslarni taklif qilamiz.</h2>
-                <p>Siz istalgan vaqtda har qanday mavzuda kurslarni organishingiz mumkin. Buning uchun qidiruv tizimidan foydalaning</p>
+                <p>{this.state.t==='uz'?("Siz istalgan vaqtda har qanday mavzuda kurslarni organishingiz mumkin. Buning uchun qidiruv tizimidan foydalaning"):("Вы можете организовать курсы по любой теме в любое время. Используйте для этого поисковик")}</p>
                 <div className= {s.header_input}>
                 <input type="text" placeholder='Qanday kurs o’rganmoqchisiz ?'/>
                 <div><BsSearch/></div>

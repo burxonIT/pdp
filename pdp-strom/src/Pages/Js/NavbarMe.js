@@ -5,6 +5,18 @@ import Foto from '../img/Group.png';
 
 
 export default class Navbar extends Component {
+    state={
+        t:localStorage.getItem("lang")?localStorage.getItem("lang"):"ru"
+    }
+    setLanguage(){
+        var a=document.querySelector("#til").value 
+        console.log(a);
+        localStorage.setItem("lang",a)
+        window.location.reload()
+    }
+    componentDidMount(){
+        document.querySelector("#til").value=this.state.t
+    }
     render() {
         return (
             <div>
@@ -21,18 +33,18 @@ export default class Navbar extends Component {
 
                     </div>
                     <div className="bat_page">
-                    <select id="cars1">
-  <option value="volvo">Rus tili</option>
-  <option value="saab">Ingli Tili</option>
-  <option value="vw">O'zbek Tili</option>
-  <option value="UZBEK" selected>UZBEK</option>
-</select>
+                    <select name="" onChange={()=>{this.setLanguage()}} id="til">
+                    <option value="uz">{this.state.t==="uz"?("O`zbek"):(("Узбек"))}</option>
+                    <option value="ru">{this.state.t==="uz"?("Russ tili"):(("русский"))}</option>
+                    </select>
 
         <button>Kirish</button>
                     </div>
                 </div>
                 </div>
                 
+            
+        
             </div>
         )
     }
