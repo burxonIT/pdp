@@ -35,31 +35,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 export default class Home extends Component {
     state={
-        t:localStorage.getItem("lang")?localStorage.getItem("lang"):"ru"
+        t:localStorage.getItem("lang")?localStorage.getItem("lang"):'uz'
     }
   render() {
     return (
       <div>
         <Navbar/>
-       
-            <header classNa me={s.bosh_menu}>
+            <header className={s.bosh_menu}>
                 <div className={s.dumaloq}>
                 </div>
-                <div className={s.header_text}>
-                <h2>Biz sizga <span> Dasturlava </span>| <br /> boshqa kurslarni taklif qilamiz.</h2>
-                <p>{this.state.t==='uz'?("Siz istalgan vaqtda har qanday mavzuda kurslarni organishingiz mumkin. Buning uchun qidiruv tizimidan foydalaning"):("Вы можете организовать курсы по любой теме в любое время. Используйте для этого поисковик")}</p>
+                <div className={s.header_text}>     
+                <h2>{this.state.t==='uz'?("Biz sizga"):("Мы к вам")} <span>{this.state.t==='uz'?(" Dasturlava"):("Программное обеспечение")} </span>|<br /> {this.state.t==='uz'?("boshqa kurslarni taklif qilamiz."):("мы предлагаем другие курсы.")} </h2>
+                <p>{this.state.t==='uz'?("Siz istalgan vaqtda har qanday mavzuda kurslarni organishingiz mumkin. Buning uchun qidiruv tizimidan foydalaning")
+                :("Вы можете организовать курсы по любой теме в любое время. Используйте для этого поисковик")}</p>
                 <div className= {s.header_input}>
-                <input type="text" placeholder='Qanday kurs o’rganmoqchisiz ?'/>
+                <input type="text" placeholder={this.state.t==='uz'?("Qanday kurs o’rganmoqchisiz ?"):("Какой курс вы хотите изучать?")}/>
                 <div><BsSearch/></div>
                 </div>
                 </div>
                 
                 <div className={s.header_card}>
                     <div className={s.card1}>
-                        <div className={s.as}>
-                            <h1 >Marketing</h1><h2>250.000 <span>UZS</span></h2>
+                        <div className={s.as}>            
+                            <h1>{this.state.t==='uz'?(" Marketing"):("Маркетинг")}</h1><h2>250.000 <span>UZS</span></h2>
                         </div>
-                        <h3>Raqamli marketing bo'yicha <br /> to'liq kurs <span>| 48 soat</span></h3>
+                        <h3>{this.state.t==='uz'?("Raqamli marketing bo'yicha "):("О цифровом маркетинге")} <br />{this.state.t==='uz'?("to'liq kurs"):("полный курс")}  <span>| 48 {this.state.t==='uz'?("soat"):("час")} </span></h3>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.1</p>
                         </div>
@@ -67,9 +67,9 @@ export default class Home extends Component {
                     </div>
                     <div id={s.card0}  className={s.card1}>
                         <div className={s.as}>
-                            <h1 className={s.hh2}>Dasturlash</h1><h2>250.000 <span>UZS</span></h2>
+                            <h1 className={s.hh2}>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h1><h2>250.000 <span>UZS</span></h2>
                         </div>
-                        <h3>Java Spring bo’yicha to’liqkurs(amaliy) <br /> to'liq kurs <span>| 48 soat</span></h3>
+                        <h3>{this.state.t==='uz'?("Java Spring bo’yicha to’liqkurs(amaliy)"):("Полный курс по Java Spring (практический)")} <br /> {this.state.t==='uz'?("to'liq kurs"):("полный курс")} <span>|48 {this.state.t==='uz'?("soat"):("час")}</span></h3>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p>
                         </div>
@@ -77,9 +77,9 @@ export default class Home extends Component {
                     </div>
                     <div id={s.card1} className={s.card1}>
                         <div className={s.as}>
-                            <h1 className={s.hh1}>Dizayn</h1><h2>400.000 <span>UZS</span></h2>
+                            <h1 className={s.hh1}>{this.state.t==='uz'?("Dizayn"):("Дизайн")}</h1><h2>400.000 <span>UZS</span></h2>
                         </div>  
-                        <h3>Illustrator 0 dan professionalgacha <br /> to'liq kurs <span>| 48 soat</span></h3>
+                        <h3>{this.state.t==='uz'?("Illustrator 0 dan professionalgacha"):("Иллюстратор от 0 до про")} <br /> {this.state.t==='uz'?("to'liq kurs"):("полный курс")} <span>| 48 {this.state.t==='uz'?("soat"):("час")}</span></h3>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.1</p>
                         </div>
@@ -87,9 +87,9 @@ export default class Home extends Component {
                     </div>
                     <div id={s.card2} className={s.card1}>
                         <div className={s.as}>
-                            <h1 className={s.hh3}>Biznes</h1><h2>250.000 <span>UZS</span></h2>
+                            <h1 className={s.hh3}>{this.state.t==='uz'?("Biznes"):("Бизнес")}</h1><h2>250.000 <span>UZS</span></h2>
                         </div>
-                        <h3>Shaxsiy biznersni rivojlantin<br /> to'liq kurs <span>| 48 soat</span></h3>
+                        <h3>{this.state.t==='uz'?("Shaxsiy biznersni rivojlantin"):("Развивайте личный бизнес")}<br />{this.state.t==='uz'?("to'liq kurs"):("полный курс")} <span>| 48 {this.state.t==='uz'?("soat"):("час")}</span></h3>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.1</p>
                         </div>
@@ -99,40 +99,40 @@ export default class Home extends Component {
                 </div>
                 
             </header>
-            <div className={s.divbig}>
-                <h1 className={s.divbigh1}>Bizning eng top kurslarimizni ko'rib chiqing</h1>
+            <div className={s.divbig}> 
+                <h1 className={s.divbigh1}>  {this.state.t==='uz'?("Bizning eng top kurslarimizni ko'rib chiqing"):("Ознакомьтесь с нашими лучшими курсами ")}</h1>
                 <div className={s.div1}>
                     <div className={s.div1card1}>
                         <img src={img1} alt="" />
                         <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                         </div>
-                        <h1>Java, Spring bo’yicha to’liq <br /> kurs.  (amaliy)</h1>
+                        <h1>{this.state.t==='uz'?("Java, Spring bo’yicha to’liq"):("Полный на Java, Spring")} <br /> {this.state.t==='uz'?("kurs.  (amaliy)"):("курс. (практический)")}</h1>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.1</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h1>38 soat</h1><h1>250.000 <span>UZS</span></h1>
+                            <h1>38 {this.state.t==='uz'?("soat"):("час")}</h1><h1>250.000 <span>UZS</span></h1>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
                     <div className={s.div1card2}>
                         <img src={img2} alt="" />
                         <div className={s.mm2}>
-                        <h2>Dizayn</h2>
+                        <h2>{this.state.t==='uz'?("Dizayn"):("Дизайн")}</h2>
                         </div>
-                        <h1>Illustrator boshlang’ichdan proffessionalgacha</h1>
+                        <h1> {this.state.t==='uz'?("Illustrator boshlang’ichdan proffessionalgacha"):("Иллюстратор от новичка до профессионала")}</h1>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.1</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h1>38 soat</h1><h1>250.000 <span>UZS</span></h1>
+                            <h1>38 {this.state.t==='uz'?("soat"):("час")}</h1><h1>250.000 <span>UZS</span></h1>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
@@ -140,52 +140,52 @@ export default class Home extends Component {
                 <div className={s.div2}>
                 <div className={s.div1card3}>
                         <img src={img3} alt="" />
-                        <div className={s.mm2}>
-                        <h2>Dizayn</h2>
+                        <div className={s.mm2}>          
+                        <h2>{this.state.t==='uz'?("Dizayn"):("Дизайн")}</h2>
                         </div>
-                        <h1>Boshlang’ich Photoshop <br /> kurslari</h1>
+                        <h1> {this.state.t==='uz'?("Boshlang’ich Photoshop"):("Базовый Фотошоп")} <br /> {this.state.t==='uz'?("kurslari"):("курсы")} </h1>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h2>42 soat</h2><h2>370.000 <span>UZS</span></h2>
+                            <h2>42 {this.state.t==='uz'?("soat"):("час")}</h2><h2>370.000 <span>UZS</span></h2>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
                     <div className={s.div1card4}>
                         <img src={img4} alt="" />
                         <div className={s.mm3}>
-                        <h2>Biznes</h2>
+                        <h2>{this.state.t==='uz'?("Biznes"):("Бизнес")}</h2>
                         </div>
-                        <h1>Shaxsiy biznesni rivojlan- <br /> tirish qoidalari</h1>
+                        <h1>{this.state.t==='uz'?("Shaxsiy biznesni rivojlan-"):("Развитие личного бизнеса")} <br /> {this.state.t==='uz'?("tirish qoidalari"):("эмпирические правила")}</h1>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h2>16 soat</h2><h2>420.000 <span>UZS</span></h2>
+                            <h2>16 {this.state.t==='uz'?("soat"):("час")}</h2><h2>420.000 <span>UZS</span></h2>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
                     <div className={s.div1card3}>
                         <img src={img5} alt="" />
                         <div className={s.mm4}>
-                        <h2>Dizayn</h2>
+                        <h2>{this.state.t==='uz'?("Dizayn"):("Дизайн")}</h2>
                         </div>
-                        <h1>1C bo’yicha to’liq kurs <br />(amaliy)</h1>
+                        <h1>{this.state.t==='uz'?("1C bo’yicha to’liq kurs"):("Полный курс по 1С")} <br />{this.state.t==='uz'?("(amaliy)"):("(практический)")}</h1>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.1</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h2>36 soat</h2><h2>450.000 <span>UZS</span></h2>
+                            <h2>36 {this.state.t==='uz'?("soat"):("час")}</h2><h2>450.000 <span>UZS</span></h2>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
@@ -193,16 +193,16 @@ export default class Home extends Component {
             </div>
             <div className={s.divbig2}>
             <div className={s.div12}>
-            <h1>Top kategoriyalar</h1><button>Barchasi</button>
+            <h1>{this.state.t==='uz'?("Top kategoriyalar"):("Лучшие категории")} </h1><button>{this.state.t==='uz'?("Barchasi"):("Все")}</button>             {this.state.t==='uz'?(""):("")}
             </div>
             <div className={s.divcards}>
                 <div className={s.carddiv}>
                     <img src={img6} alt="" />
-                    <h2>Dasturlash</h2>
+                    <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                 </div>
                 <div className={s.carddiv}>
                     <img src={img7} alt="" />
-                    <h2>Dizayn</h2>
+                    <h2>{this.state.t==='uz'?("Dizayn"):("Дизайн")}</h2>
                 </div>
                 <div className={s.carddiv}>
                     <img src={img8} alt="" />
@@ -210,53 +210,53 @@ export default class Home extends Component {
                 </div>
                 <div className={s.carddiv}>
                     <img src={img9} alt="" />
-                    <h2>Buxgalteriya</h2>
+                    <h2>{this.state.t==='uz'?("Buxgalteriya"):("Бухгалтерский учет")}</h2>
                 </div>
                 </div>
                 <div className={s.divcards2}>
                 <div className={s.carddiv}>
                     <img src={img10} alt="" />
-                    <h2>Marketing</h2>
+                    <h2>{this.state.t==='uz'?("Marketing"):("Маркетинг")}</h2>
                 </div>
                 <div className={s.carddiv}>
                     <img src={img11} alt="" />
-                    <h2>Menejment</h2>
+                    <h2>{this.state.t==='uz'?("Menejment"):("Управление")}</h2>
                 </div>
                 <div className={s.carddiv}>
                     <img src={img12} alt="" />
-                    <h2>Xavfsizlik</h2>
+                    <h2>{this.state.t==='uz'?("Xavfsizlik"):("Безопасность")}</h2>
                 </div>
                 <div className={s.carddiv}>
                     <img src={img13} alt="" />
-                    <h2>Salomatlik</h2>
+                    <h2>{this.state.t==='uz'?("Salomatlik"):("Безопасность")}</h2>
                 </div>
                 </div>
                 <div className={s.divcards3}>
-                    <h3>Dasturlash</h3>
-                    <h3>Dizayn</h3>
-                    <h3>Marketing</h3>
-                    <h3>Biznes</h3>
-                    <h3>Salomatlik</h3>
-                    <h3>Menejment</h3>
-                    <h3>Buxgalteriya</h3>
-                    <h3>Tarmoq</h3>
+                    <h3>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h3>
+                    <h3>{this.state.t==='uz'?("Dizayn"):("Дизайн")}</h3>
+                    <h3>{this.state.t==='uz'?("Marketing"):("Маркетинг")}</h3>
+                    <h3>{this.state.t==='uz'?("Biznes"):("Бизнес")}</h3>
+                    <h3>{this.state.t==='uz'?("Salomatlik"):("Безопасность")}</h3>
+                    <h3>{this.state.t==='uz'?("Menejment"):("Управление")}</h3>
+                    <h3>{this.state.t==='uz'?("Buxgalteriya"):("Бухгалтерский учет")}</h3>
+                    <h3>{this.state.t==='uz'?("Tarmoq"):("Сеть")}</h3>
                 </div>
             </div>
             <div className={s.divbig3}>
             <div className={s.card11}>
                 <img src={img14} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                         </div>
-                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                <h1>{this.state.t==='uz'?("Python bo’yicha boshlang’ich dasturlash"):("Базовое программирование на Python")}</h1>
                 <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv1}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                            <h3>42 {this.state.t==='uz'?("soat"):("час")}</h3><h3>370.000 <span>UZS</span></h3>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     
@@ -264,17 +264,17 @@ export default class Home extends Component {
             <div className={s.card11}>
                 <img src={img15} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                         </div>
-                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                        <h1>{this.state.t==='uz'?("Python bo’yicha boshlang’ich dasturlash"):("Базовое программирование на Python")}</h1>
                 <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv1}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                            <h3>42 {this.state.t==='uz'?("soat"):("час")}</h3><h3>370.000 <span>UZS</span></h3>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     
@@ -282,17 +282,17 @@ export default class Home extends Component {
             <div className={s.card11}>
                 <img src={img16} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                         </div>
-                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                        <h1>{this.state.t==='uz'?("Python bo’yicha boshlang’ich dasturlash"):("Базовое программирование на Python")}</h1>
                 <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv1}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                            <h3>42 {this.state.t==='uz'?("soat"):("час")}</h3><h3>370.000 <span>UZS</span></h3>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     
@@ -300,17 +300,17 @@ export default class Home extends Component {
             <div className={s.card11}>
                 <img src={img17} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                         </div>
-                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                        <h1>{this.state.t==='uz'?("Python bo’yicha boshlang’ich dasturlash"):("Базовое программирование на Python")}</h1>
                 <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv1}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                            <h3>42 {this.state.t==='uz'?("soat"):("час")}</h3><h3>370.000 <span>UZS</span></h3>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     
@@ -318,17 +318,17 @@ export default class Home extends Component {
             <div className={s.card11}>
                 <img src={img18} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash</h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                         </div>
-                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                        <h1>{this.state.t==='uz'?("Python bo’yicha boshlang’ich dasturlash"):("Базовое программирование на Python")}</h1>
                 <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv1}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                            <h3>42 {this.state.t==='uz'?("soat"):("час")}</h3><h3>370.000 <span>UZS</span></h3>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     
@@ -336,32 +336,32 @@ export default class Home extends Component {
             <div className={s.card11}>
                 <img src={img19} alt="" />
                 <div className={s.mm1}>
-                        <h2>Dasturlash </h2>
+                        <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")} </h2>
                         </div>
-                <h1>Python bo’yicha boshlang’ich <br /> dasturlash</h1>
+                        <h1>{this.state.t==='uz'?("Python bo’yicha boshlang’ich dasturlash"):("Базовое программирование на Python")}</h1>
                 <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p> <span>(524)</span>
                         </div>
                         <div className={s.pdiv1}>
-                        <p>Kurs hajmi</p><p>Kurs narxi</p>
+                        <p>{this.state.t==='uz'?("Kurs hajmi"):("Размер поля")}</p><p>{this.state.t==='uz'?("Kurs narxi"):("Стоимость курса")}</p>
                         </div>
                         <div className={s.h1div}>
-                            <h3>42 soat</h3><h3>370.000 <span>UZS</span></h3>
+                            <h3>42 {this.state.t==='uz'?("soat"):("час")}</h3><h3>370.000 <span>UZS</span></h3>
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     
             </div>
             </div>
             <div className={s.divbig4}>
-                <h1>“O’z qalbing va ichki sezgingga ergashishuchun <br />  yetarlicha jur’atli bo’l. Zotan shu ikki tuyg’u <br /> sening aslida kim bo’lishni xoxlashingni aniq biladi.”</h1>
+            {this.state.t==='uz'?(<h1>“O’z qalbing va ichki sezgingga ergashishuchun<br/> yetarlicha juratli bol. Zotan shu ikki tuygu <br /> sening aslida kim bo’lishni xoxlashingni aniq biladi.”</h1>):(<h1>«Следовать своему сердцу и интуиции<br />быть достаточно храбрым. Это два чувства <br /> точно знает, кем ты действительно хочешь быть».</h1>)}
             </div>
             <div className={s.divbig5}>
-                <h1>Biz haqimizda boshqalar fikri</h1>
+                <h1>{this.state.t==='uz'?("Biz haqimizda boshqalar fikri"):("Что другие думают о нас")} </h1>
             <div className={s.divswiper}>
             <Swiper navigation={true} modules={[Navigation]} className={s.mySwiper}>
         <SwiperSlide>  <div class={s.slide}>
         <img src={img20} alt="" />
-        <h2>Ted Howard</h2>
+        <h2>{this.state.t==='uz'?("Ted Howard"):("Тед Ховард")}</h2>
         <span>Senior Designer</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
         </div> </SwiperSlide>

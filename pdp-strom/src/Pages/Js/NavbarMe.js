@@ -6,7 +6,7 @@ import Foto from '../img/Group.png';
 
 export default class Navbar extends Component {
     state={
-        t:localStorage.getItem("lang")?localStorage.getItem("lang"):"ru"
+        t:localStorage.getItem("lang")?localStorage.getItem("lang"):'ru'
     }
     setLanguage(){
         var a=document.querySelector("#til").value 
@@ -34,8 +34,8 @@ export default class Navbar extends Component {
                     </div>
                     <div className="bat_page">
                     <select name="" onChange={()=>{this.setLanguage()}} id="til">
-                    <option value="uz">{this.state.t==="uz"?("O`zbek"):(("Узбек"))}</option>
-                    <option value="ru">{this.state.t==="uz"?("Russ tili"):(("русский"))}</option>
+                    <option value="uz">{this.state.t==="uz"?("O`zbek"):("Узбек")}</option>
+                    <option value="ru">{this.state.t==="uz"?("Russ tili"):("русский")}</option>
                     </select>
 
         <button>Kirish</button>

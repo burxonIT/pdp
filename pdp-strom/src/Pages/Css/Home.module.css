@@ -6,12 +6,13 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 700px;
-    background: #536DFD ;
-    overflow: hidden;
+    min-height: 600px;
+    background: #536DFD !important;
+    overflow: hidden !important;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
+    
 }
 .dumaloq{
     position: absolute;
