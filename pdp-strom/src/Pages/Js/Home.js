@@ -30,21 +30,43 @@ import adidas from '../img/download.png'
 import lya from '../img/download 5.png'
 import sur from '../img/download 3.png'
 import { Swiper, SwiperSlide } from "swiper/react";
-  import "swiper/css";
-  import "swiper/css/navigation";
+import "swiper/css";
+import "swiper/css/navigation";
 import { Navigation } from "swiper";
 export default class Home extends Component {
     state={
-        t:localStorage.getItem("lang")?localStorage.getItem("lang"):'uz'
+        t:localStorage.getItem("lang")?localStorage.getItem("lang"):'uz',
+        data:[{
+            count:1,
+            price:1200000,
+            title:'samsung',
+            img:'http://localhost:3000/static/media/image%202.f850da1213e8b5b91355.png'
+        },{
+            count:1,
+            price:1400000,
+            title:'iphone',
+            img:'http://localhost:3000/static/media/image%204.dbe61bf661d0b9f0c862.png'
+        }
+        ],
+        buy:[]
     }
-  render() {
-    return (
-      <div>
+    buy(item){
+        console.log(item);
+        var b=this.state.buy
+        b.push(item)
+        this.setState({buy:b})
+    }
+render() {
+return (
+        <div>
         <Navbar/>
+        <div className="cards">
+            
+        </div>
             <header className={s.bosh_menu}>
                 <div className={s.dumaloq}>
                 </div>
-                <div className={s.header_text}>     
+                <div className={s.header_text}>
                 <h2>{this.state.t==='uz'?("Biz sizga"):("Мы к вам")} <span>{this.state.t==='uz'?(" Dasturlava"):("Программное обеспечение")} </span>|<br /> {this.state.t==='uz'?("boshqa kurslarni taklif qilamiz."):("мы предлагаем другие курсы.")} </h2>
                 <p>{this.state.t==='uz'?("Siz istalgan vaqtda har qanday mavzuda kurslarni organishingiz mumkin. Buning uchun qidiruv tizimidan foydalaning")
                 :("Вы можете организовать курсы по любой теме в любое время. Используйте для этого поисковик")}</p>
@@ -69,7 +91,7 @@ export default class Home extends Component {
                         <div className={s.as}>
                             <h1 className={s.hh2}>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h1><h2>250.000 <span>UZS</span></h2>
                         </div>
-                        <h3>{this.state.t==='uz'?("Java Spring bo’yicha to’liqkurs(amaliy)"):("Полный курс по Java Spring (практический)")} <br /> {this.state.t==='uz'?("to'liq kurs"):("полный курс")} <span>|48 {this.state.t==='uz'?("soat"):("час")}</span></h3>
+                        <h3>{this.state.t==='uz'?("Java Spring bo’yicha to’liqkurs(amaliy)"):("Полный курс по Java Spring")} <br /> {this.state.t==='uz'?("to'liq kurs"):("полный курс")} <span>|48 {this.state.t==='uz'?("soat"):("час")}</span></h3>
                         <div className={s.yulduz}>
                         <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/> <AiFillStar className={s.yulduzcha}/><AiFillStar className={s.yulduz1}/><p>4.0</p>
                         </div>
@@ -96,8 +118,7 @@ export default class Home extends Component {
                         <button className={s.onga}><AiOutlineArrowRight/></button>
                     </div>
 
-                </div>
-                
+                </div>  
             </header>
             <div className={s.divbig}> 
                 <h1 className={s.divbigh1}>  {this.state.t==='uz'?("Bizning eng top kurslarimizni ko'rib chiqing"):("Ознакомьтесь с нашими лучшими курсами ")}</h1>
@@ -136,8 +157,9 @@ export default class Home extends Component {
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
-                </div>
-                <div className={s.div2}>
+                </div> 
+            </div>
+            <div className={s.div2}>
                 <div className={s.div1card3}>
                         <img src={img3} alt="" />
                         <div className={s.mm2}>          
@@ -189,7 +211,6 @@ export default class Home extends Component {
                         </div>
                         <button className={s.onga1}><AiOutlineArrowRight/></button>
                     </div>
-                </div>
             </div>
             <div className={s.divbig2}>
             <div className={s.div12}>
@@ -198,7 +219,7 @@ export default class Home extends Component {
             <div className={s.divcards}>
                 <div className={s.carddiv}>
                     <img src={img6} alt="" />
-                    <h2>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
+                    <h2 className={s.ddd}>{this.state.t==='uz'?("Dasturlash"):("Программирование")}</h2>
                 </div>
                 <div className={s.carddiv}>
                     <img src={img7} alt="" />
@@ -362,28 +383,28 @@ export default class Home extends Component {
         <SwiperSlide>  <div class={s.slide}>
         <img src={img20} alt="" />
         <h2>{this.state.t==='uz'?("Ted Howard"):("Тед Ховард")}</h2>
-        <span>Senior Designer</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
+        <span>{this.state.t==='uz'?("Senior Designer"):("Старший дизайнер")}</span>
+        {this.state.t==='uz'?(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>):(<p>Следовать своему сердцу и интуиции <br />быть достаточно храбрым. Это два чувства <br />точно знает, кем ты действительно хочешь быть</p>)}
         </div> </SwiperSlide>
         <SwiperSlide>  <div class={s.slide}>
         <img src={img20} alt="" />
-        <h2>Ted Howard</h2>
-        <span>Senior Designer</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
+        <h2>{this.state.t==='uz'?("Ted Howard"):("Тед Ховард")}</h2>
+        <span>{this.state.t==='uz'?("Senior Designer"):("Старший дизайнер")}</span>
+        {this.state.t==='uz'?(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>):(<p>Следовать своему сердцу и интуиции <br />быть достаточно храбрым. Это два чувства <br />точно знает, кем ты действительно хочешь быть</p>)}
         </div> </SwiperSlide>
         <SwiperSlide>  <div class={s.slide}>
         <img src={img20} alt="" />
-        <h2>Ted Howard</h2>
-        <span>Senior Designer</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>
-        </div> </SwiperSlide>
+        <h2>{this.state.t==='uz'?("Ted Howard"):("Тед Ховард")}</h2>
+        <span>{this.state.t==='uz'?("Senior Designer"):("Старший дизайнер")}</span>
+        {this.state.t==='uz'?(<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas cras turpis <br /> volutpat libero orci placerat varius. Diam egestas morbi suspendisse morbi. <br /> Quis et volutpat donec ipsum malesuada ipsum mattis tincidunt mattis. <br /> Proin tristique ultrices egestas ut vitae consectetur est.</p>):(<p>Следовать своему сердцу и интуиции <br />быть достаточно храбрым. Это два чувства <br />точно знает, кем ты действительно хочешь быть</p>)}
+        </div></SwiperSlide>
  
       </Swiper>
             </div>
         
             </div>
             <div className={s.divbig6}>
-                <h1>Bizning hamkorlar</h1>
+                <h1>{this.state.t==='uz'?("Bizning hamkorlar"):("Наши партнеры")}</h1>
                 <div className={s.divbigimg}>
                 <div className={s.divimg}>
                     <a href=""><img src={pinterest} alt="" /></a>
@@ -400,9 +421,8 @@ export default class Home extends Component {
                 </div>
                 </div>
             </div>
-        
         <Footer/>
-      </div>
-    )
-  }
+        </div>
+)
+}
 }
