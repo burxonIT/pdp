@@ -5,6 +5,8 @@ import s from  '../Css/Home.module.css'
 import {BsSearch} from 'react-icons/bs'
 import {AiFillStar} from 'react-icons/ai'
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import img1 from '../img/image 3.png'
 import img2 from '../img/image.png'
 import img3 from '../img/image 2.png'
@@ -33,22 +35,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import axios from 'axios'
 export default class Home extends Component {
     state={
         t:localStorage.getItem("lang")?localStorage.getItem("lang"):'uz',
-        data:[{
-            count:1,
-            price:1200000,
-            title:'samsung',
-            img:'http://localhost:3000/static/media/image%202.f850da1213e8b5b91355.png'
-        },{
-            count:1,
-            price:1400000,
-            title:'iphone',
-            img:'http://localhost:3000/static/media/image%204.dbe61bf661d0b9f0c862.png'
-        }
-        ],
-        buy:[]
+        data:[]
     }
     buy(item){
         console.log(item);
@@ -56,13 +47,36 @@ export default class Home extends Component {
         b.push(item)
         this.setState({buy:b})
     }
+    componentDidMount(){
+        axios.get('https://markaz-yhlk.onrender.com/course').then(res=>{
+            this.setState({data:res.data})
+        }).catch(err=>{
+            alert(err)
+        })
+    }
 render() {
 return (
         <div>
         <Navbar/>
-        <div className="cards">
+        <div className={s.cardss}>
+        {this.state.data.map((item,key)=>{
+            if(key===0 || key===1){
+
             
-        </div>
+            return <Card style={{ width: '18rem' }}>
+        
+      <Card.Img variant="top" src={item.course_img} />
+      <Card.Body>
+        <Card.Title>{item.course_title_ru}</Card.Title>
+        <Card.Text>
+         {item.course_price} som
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+      }
+    })}
+    </div>
             <header className={s.bosh_menu}>
                 <div className={s.dumaloq}>
                 </div>
