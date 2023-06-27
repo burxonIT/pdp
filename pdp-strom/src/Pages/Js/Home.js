@@ -376,7 +376,7 @@ return (
             <div className={s.divbig4}>
             {this.state.t==='uz'?(<h1>“O’z qalbing va ichki sezgingga ergashishuchun<br/> yetarlicha juratli bol. Zotan shu ikki tuygu <br /> sening aslida kim bo’lishni xoxlashingni aniq biladi.”</h1>):(<h1>«Следовать своему сердцу и интуиции<br />быть достаточно храбрым. Это два чувства <br /> точно знает, кем ты действительно хочешь быть».</h1>)}
             </div>
-            <div className={s.divbig5}>
+            <div className={s.divbig5}> 
                 <h1>{this.state.t==='uz'?("Biz haqimizda boshqalar fikri"):("Что другие думают о нас")} </h1>
             <div className={s.divswiper}>
             <Swiper navigation={true} modules={[Navigation]} className={s.mySwiper}>
