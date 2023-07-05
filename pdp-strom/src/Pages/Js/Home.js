@@ -40,6 +40,8 @@ export default class Home extends Component {
     state={
         t:localStorage.getItem("lang")?localStorage.getItem("lang"):'uz',
         data:[]
+        
+
     }
     buy(item){
         console.log(item);
@@ -54,11 +56,12 @@ export default class Home extends Component {
             alert(err)
         })
     }
+    
 render() {
 return (
         <div>
         <Navbar/>
-        <div className={s.cardss}>
+        {/* <div className={s.cardss}>
         {this.state.data.map((item,key)=>{
             if(key===0 || key===1){
 
@@ -76,7 +79,7 @@ return (
     </Card>
       }
     })}
-    </div>
+    </div> */}
             <header className={s.bosh_menu}>
                 <div className={s.dumaloq}>
                 </div>
